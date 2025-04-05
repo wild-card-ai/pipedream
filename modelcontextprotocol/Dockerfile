@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 
 # Install dependencies and build
-RUN npm ci && npm run build
+RUN npm ci --legacy-peer-deps && npm run build
 
 ENV PORT=3010
 EXPOSE 3010
